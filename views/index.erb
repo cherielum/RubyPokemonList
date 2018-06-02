@@ -1,0 +1,15 @@
+<h1>List Your Favorite Pokemon</h1>
+
+<form action="/" method="post">
+    <input type="text" name="name" placeholder="Type a Pokemon">
+    <button type="submit">Add</button>
+</form>
+
+<ul>
+    <% @pokemons.each do | pokemon | %>
+      <li>
+        <a href="/<%= pokemon.id %>"><%= pokemon.name %></a>
+      </li>
+    <% end %>
+</ul>
+
